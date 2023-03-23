@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {useFormik} from "formik";
 import './Add.scss'
 import {useNavigate} from "react-router-dom";
@@ -13,7 +13,7 @@ export type Data = {
 export const Add = () => {
     let date = new Date()
     const nav = useNavigate()
-    let [allData, setData] = useState<Data[]>([])
+    let allData
     const formik = useFormik({
         initialValues: {
             tag: '',

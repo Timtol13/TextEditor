@@ -40,7 +40,7 @@ export const Tasks = () => {
                         setTags(e => [...e, task.tag])
                     }
                     return (
-                        <div className={'btns'}>
+                        <div className={'buttons'}>
                             <button
                                 className={'btn'}
                                 onClick={() => {setSearch(task.tag)}}>
