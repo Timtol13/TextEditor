@@ -3,12 +3,82 @@ div {
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
+  .search_add{
+    display: flex;
+    flex-direction: row;
+    .btn {
+      margin-top: 43px;
+      border: none;
+      border-radius: 10px;
+      width: 120px;
+      background-color: #FF7070;
+      &:active {
+        background-color: #dd7070;
+      }
+    }
+    .w10{
+      background-color: #FF0000;
+      margin-left: 5px;
+      width: 30px;
+    }
+    .green{
+      background-color: limegreen;
+      height: 30px;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      font-size: 24px;
+    }
+  }
+  .tags {
+    position: absolute;
+    margin-left: -20vw;
+    margin-top: 30px;
+    .btns {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
+      height: 30px;
+      margin-right: auto;
+      margin-left: auto;
+      .btn {
+
+        border: none;
+        border-radius: 10px;
+        width: 120px;
+        word-wrap: break-word;
+        background-color: #FF7070;
+
+        &:active {
+          background-color: #dd7070;
+        }
+      }
+      .w10{
+        background-color: #FF0000;
+        margin-left: 5px;
+        width: 25px;
+      }
+    }
+  }
   .task {
     margin-top: 20px;
     padding: 30px;
     width: 700px;
-    height: 160px;
+    height: 260px;
+    border-radius: 30px;
     background-color: rgba(240, 240, 0, .6);
+    .tag{
+      display: flex;
+      flex-direction: row;
+      margin-left: 0;
+      opacity: .4;
+      input{
+        margin-left: 10px;
+        border-radius: 5px;
+        border: 1px solid #D3E24D;
+        width: 50px;
+      }
+    }
     .title {
       color: #000;
       font-weight: bolder;
@@ -18,10 +88,14 @@ div {
       margin-left: 0;
     }
     .description{
-      color: #000;
-      font-size: 16px;
-      margin-top: 10px;
-      margin-left: 0;
+      p {
+        word-wrap: break-word;
+        color: #000;
+        width: 700px;
+        height: 80px;
+        font-size: 16px;
+        margin-top: 10px;
+      }
     }
     .date{
       color: #000;
@@ -31,4 +105,14 @@ div {
       margin-right: 0;
     }
   }
+}
+.search{
+  width: 220px;
+  margin-top: 40px;
+  border: 2px solid #D3E24D;
+  background-color: rgba(240, 240, 0, .6);
+  padding: 10px;
+  border-radius: 20px;
+  margin-right: auto;
+  margin-left: auto;
 }
