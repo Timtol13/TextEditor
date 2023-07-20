@@ -24,13 +24,11 @@ export const Tasks = () => {
     useEffect(() => {
         setTasks(title? JSON.parse(title).reverse() : [])
     }, [])
-    console.log(tasks)
     tasks?.map(task => {
         if(task?.tag !in tags) {
             setTags(e => [...e, task.tag])
         }
     })
-    console.log(tags)
     return (
         <div>
             <div className={'tags'}>
@@ -85,8 +83,10 @@ export const Tasks = () => {
             })
             }
             {search && tasks?.map(task => {
-                if (task.tag === search){
-                    return (
+                let tags = task.tag.split(', ')
+                let ret
+                tags.map(el => {if (search.includes(el)){
+                    ret = (
                         <div className={'task'}>
                             <div className={'tag'}>
                                 Tag: <input type={'text'} placeholder={task.tag ? task.tag : 'empty'} onChange={e => {
@@ -100,6 +100,11 @@ export const Tasks = () => {
                             <div className={'date'}>{task.date}</div>
                         </div>
                     )
+                } else {
+                    
+                }})
+                if (true){
+                    return ret
                 }
             })}
         </div>
